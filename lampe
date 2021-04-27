@@ -849,7 +849,7 @@ hbSendLightsState() {
 # checks wether there is a hue bridge at given IP
 hbCheck() {
 	hbDescription=$(curl "http://$1/description.xml" -m 3 2> /dev/null)
-	hbModel=$(echo "$hbDescription" | grep "<modelDescription>Philips hue Personal Wireless Lighting</modelDescription>")
+	hbModel=$(echo "$hbDescription" | grep "<modelDescription>Philips hue compatible Personal Wireless Lighting</modelDescription>")
 }
 
 # try to detect the first Hue Bridge in the LAN (ipv4 class-C networks only, can detect only one bridge)
